@@ -3,8 +3,8 @@ import 'dart:ui';
 
 import 'package:bloc_pattern/bloc_pattern.dart';
 
-import 'package:fluttertube_bloc/models/video.dart';
-import 'package:fluttertube_bloc/screens/api.dart';
+import '../models/video.dart';
+import '../screens/api.dart';
 
 class VideosBloc implements BlocBase {
   //acesso a api

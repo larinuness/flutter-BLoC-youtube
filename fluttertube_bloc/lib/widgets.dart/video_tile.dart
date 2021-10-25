@@ -1,10 +1,10 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_youtube/flutter_youtube.dart';
-import 'package:fluttertube_bloc/blocs/favorite_bloc.dart';
+import '../blocs/favorite_bloc.dart';
 
-import 'package:fluttertube_bloc/models/video.dart';
-import 'package:fluttertube_bloc/screens/api.dart';
+import '../models/video.dart';
+import '../screens/api.dart';
 
 // ignore: must_be_immutable
 class VideoTile extends StatelessWidget {
@@ -20,11 +20,7 @@ class VideoTile extends StatelessWidget {
     final bloc = BlocProvider.getBloc<FavoriteBloc>();
     Map<String, Video> map = {};
 
-    return GestureDetector(
-      //coloquei o gestureDetector para colocar o onTap
-      onTap: FlutterYoutube.playYoutubeVideoById(
-          apiKey: API_KEY, videoId: video.id),
-      child: Container(
+    return Container(
         margin: const EdgeInsets.symmetric(vertical: 4),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -45,11 +41,10 @@ class VideoTile extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                        child: Text(
-                          video.title,
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 16),
-                          maxLines: 2,
+                        child: GestureDetector(
+                          onTap: FlutterYoutube.playYoutubeVideoById(apiKey: API_KEY, videoId: video.id),
+                          child: Text(video.title,style: const TextStyle(
+                              color: Colors.white, fontSize: 16)),
                         ),
                       ),
                       Padding(
@@ -88,7 +83,7 @@ class VideoTile extends StatelessWidget {
             )
           ],
         ),
-      ),
-    );
+      );
+    
   }
 }

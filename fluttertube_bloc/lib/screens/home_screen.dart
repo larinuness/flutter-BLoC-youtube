@@ -1,11 +1,11 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertube_bloc/blocs/favorite_bloc.dart';
-import 'package:fluttertube_bloc/blocs/videos_bloc.dart';
-import 'package:fluttertube_bloc/delegates/data_search.dart';
-import 'package:fluttertube_bloc/models/video.dart';
-import 'package:fluttertube_bloc/screens/favorites_screen.dart';
-import 'package:fluttertube_bloc/widgets.dart/video_tile.dart';
+import '../blocs/favorite_bloc.dart';
+import '../blocs/videos_bloc.dart';
+import '../delegates/data_search.dart';
+import '../models/video.dart';
+import 'favorites_screen.dart';
+import '../widgets.dart/video_tile.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);

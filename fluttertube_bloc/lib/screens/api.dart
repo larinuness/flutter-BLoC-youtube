@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:fluttertube_bloc/models/video.dart';
+import '../models/video.dart';
 import 'package:http/http.dart' as http;
 
 // ignore: constant_identifier_names

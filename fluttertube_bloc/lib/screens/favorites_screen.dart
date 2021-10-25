@@ -1,9 +1,9 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_youtube/flutter_youtube.dart';
-import 'package:fluttertube_bloc/blocs/favorite_bloc.dart';
-import 'package:fluttertube_bloc/models/video.dart';
-import 'package:fluttertube_bloc/screens/api.dart';
+import '../blocs/favorite_bloc.dart';
+import '../models/video.dart';
+import 'api.dart';
 
 class FavoritesScreen extends StatelessWidget {
   const FavoritesScreen({Key? key}) : super(key: key);

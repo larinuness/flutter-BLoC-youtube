@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:ui';
 
 import 'package:bloc_pattern/bloc_pattern.dart';
-import 'package:fluttertube_bloc/models/video.dart';
+import '../models/video.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
