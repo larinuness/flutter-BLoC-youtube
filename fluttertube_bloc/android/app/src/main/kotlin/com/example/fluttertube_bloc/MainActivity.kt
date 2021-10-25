@@ -1,0 +1,6 @@
+package com.example.fluttertube_bloc
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
