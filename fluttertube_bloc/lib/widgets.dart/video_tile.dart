@@ -59,6 +59,7 @@ class VideoTile extends StatelessWidget {
                 StreamBuilder<Map<String, Video>>(
                   stream: bloc.outFav,
                   //initialData vazio porque ele só vai ter dados depois do sink.add
+                  //e também pq assim fica inicialiado com 0 em vez de vazio
                   initialData: map,
                   builder:
                       //esse snapshot vai conter toda a lista de favoritos
