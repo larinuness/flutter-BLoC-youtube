@@ -18,12 +18,14 @@ class Video {
 
     if (json.containsKey('id')) {
       return Video(
+        //formato google
         id: json['id']['videoId'],
         title: json['snippet']['title'],
         thumb: json['snippet']['thumbnails']['high']['url'],
         channel: json['snippet']['channelTitle'],
       );
     } else {
+      //formato nosso
       return Video(
         id: json['videoId'],
         title: json['title'],
